@@ -2,6 +2,8 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+
+
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -12,8 +14,8 @@ def about():
 
 @app.route('/tasks')
 def list_tasks():
-    tarea = "Lavar la Ropa"
-    return render_template('tasks.html', t=tarea)
+    tareas = ["Labar la ropa","Limpiar la casa","Hacer la compra"]
+    return render_template('tasks.html', tareas=tareas)
 
 if __name__ == '__main__':
     app.run(debug=True, host='127.0.0.1', port=5001)

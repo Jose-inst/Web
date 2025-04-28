@@ -4,6 +4,11 @@
     </head>
     <body>
         <h1>Mis tareas</h1>
-        <p>Mi tarea pendiente es: {{t}} </p>
+        <p>Mis tareas pendientes son:</p>
+        <ul>
+            {% for tarea in tareas %}
+            <li> {{ tarea }} </li>
+            {% endfor %}
+        </ul>
     </body>
 </html>
